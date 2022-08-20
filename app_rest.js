@@ -769,6 +769,9 @@ io.on('connection', socket => {
     socket.on('error', err => socket.emit('error', err.message) );
 });
 
-server.listen({ port: 8500 }, async () => {
+
+port = process.env.PORT || 8500
+
+server.listen({ port: port }, async () => {
     await sequelize.authenticate();
 });
