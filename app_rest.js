@@ -13,7 +13,7 @@ const { Server } = require("socket.io");
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:8080',
+        origin: 'https://rezervacija-hotela.herokuapp.com',
         methods: ['GET', 'POST'],
         credentials: true
     },
